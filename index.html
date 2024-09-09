@@ -1,0 +1,69 @@
+<!--Ryan Hutchings-->
+<!--Unit 17.1 Exercise Part 2: Movie App-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="movieApp.css">
+  <title>Unit 17.1 Exercise Part 2: Movie App</title>
+
+  <!--Rubik Font from Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <h1>Movie App!</h1>
+
+  <!--Form for submitting a movie and it's rating into a table-->
+  <div class="movieForm">
+    <h2>Enter Movie And Rating:</h2>
+    <!--Note to self: for input keywords like required and minlength to work, form must be the event listener(must use 'submit'/'onsubmit' as event) and not the submit button-->
+
+    <!--gives the specific features for submitting a movie-->
+    <form class="movieRatingForm">
+      <label for="movieName">Movie Name:</label>
+      <input id="movieName" name="movieName" type="text" minlength="2" required>
+      <label for="movieRating">Movie Rating:</label>
+      <input id="movieRating" name="movieRating" type="number" required min="0" max="10">
+      <input class="submitButton" type="submit" name="submitBtn" value="Submit Movie Rating">
+    </form>
+  </div>
+
+  <!--Main table for showing all the movies and their ratings-->
+  <table class="moviesTable">
+    <!--A section for the movie, it's rating, a remove movie button, and a sorting table dropdown menu-->
+    <thead>
+      <tr>
+        <th class="nameHeader">Movie</th>
+        <th>Rating</th>
+        <th>Remove</th>
+        <th>
+          <!--A sorting option for the table-->
+          <label for="sortMovieTable" class="sortLabel">Sort By:</label>
+          <select id="sortMovieTable" name="sortMovieTable">
+            <option value="default">Choose one</option>
+            <option value="alphabetical">Alphabetical</option>
+            <option value="highestRating">Highest Rating</option>
+            <option value="lowestRating">Lowest Rating</option>
+          </select>
+        </th>
+      </tr>
+    </thead>
+    <!--Table body for all the added movies and their ratings-->
+    <tbody></tbody>
+  </table>
+
+  <!--jQuery cdn: to use jQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+  <script src="movieApp.js"></script>
+</body>
+
+</html>

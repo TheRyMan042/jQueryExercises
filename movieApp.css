@@ -1,0 +1,177 @@
+/*
+Ryan Hutchings
+Unit 17.1 Exercise Part 2: Movie App
+*/
+
+* {
+  font-family: Rubik, Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  /* background-color: antiquewhite; */
+  /* background-color: burlywood; */
+  background-image: url('https://entrepreneurship.babson.edu/wp-content/uploads/2020/10/Movie-1200-630.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  /* background-color:  #000080; */
+  background-color: rgb(42, 161, 201);
+  padding: 42px 0px;
+  margin: 0px;
+  color: whitesmoke;
+  /* border: 2px solid black; */
+}
+
+/*Promt for the form*/
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 10px;
+  -webkit-text-stroke: white 1px;
+}
+
+/*Fonts sizes for all text*/
+label,
+.moviesTable {
+  font-size: 1.5rem;
+}
+
+input,
+select,
+td,
+.removeBtnDecor {
+  font-size: 1.25rem;
+}
+
+/*forms input*/
+input {
+  border: 2px solid black;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid orangered;
+}
+
+/*Layout of the form*/
+.movieForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  padding: 0px 0px 16px 16px;
+  background-color: rgba(184, 182, 182, 0.791);
+}
+
+.movieRatingForm {
+  display: flex;
+  margin: 0px 32px;
+  align-items: baseline;
+  justify-content: center;
+}
+
+label {
+  margin: 0px 5px;
+  font-weight: 500;
+}
+
+/*text input of form*/
+#movieName,
+#movieRating {
+  display: block;
+  margin: 5px 20px 10px 0px;
+}
+
+/*selector for sorting table*/
+#sortMovieTable {
+  margin: 10px 5px 10px;
+  outline: none;
+  border: 2px solid black;
+}
+
+.sortLabel {
+  font-weight: bold;
+  /* color: white; */
+  /* -webkit-text-stroke: black 1px; */
+}
+
+/*button for adding movie to the table*/
+.submitButton {
+  margin: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 6px;
+  font-weight: 500;
+}
+
+/*some table headers width*/
+.nameHeader {
+  min-width: 450px;
+}
+
+.mainTitle {
+  min-width: 100%;
+}
+
+/*table for all movies and their ratings*/
+.moviesTable {
+  border: 1px solid black;
+  width: 100%;
+  border-spacing: 0px;
+}
+
+/*layout for table headers and cells*/
+th,
+td {
+  border: 1px solid black;
+  padding: 5px 10px;
+  text-align: center;
+  /* background-color: rgb(184, 182, 182); */
+  background-color: rgb(238, 10, 53);
+  min-width: 100px;
+}
+
+/*background of table*/
+td,
+.removeBtnDecor {
+  /* background-color: white; */
+  /* background-color: rgb(42,161,201); */
+  background-color: rgb(184, 182, 182);
+  font-weight: 500;
+}
+
+/*background of table header*/
+tr {
+  border: 1px solid red;
+}
+
+/* layout of the remove button*/
+.removeBtnDecor {
+  border: none;
+  width: 100%;
+  height: 33.5px;
+  padding: 0;
+  background-color: #774747;
+  color: whitesmoke;
+}
+
+.removeBtnDecor:hover {
+  background-color: whitesmoke;
+  color: rgb(157, 51, 12);
+}
+
+/*spacing for remove button*/
+.removeBtnCell {
+  padding: 0;
+}
